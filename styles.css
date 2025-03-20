@@ -1,0 +1,231 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+}
+
+/* CORES */
+:root {
+    --primary-color: #003366; /* Azul Marinho */
+    --secondary-color: #FFA500; /* Amarelo */
+    --accent-color: #00CED1; /* Verde-Água */
+    --white: #fff;
+}
+
+/* CABEÇALHO */
+.header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1rem;
+}
+
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 15px 30px; /* Botão maior */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradiente azul e amarelo */
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.btn:hover {
+    transform: translateY(-3px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+}
+
+/* SEÇÕES */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.about p,
+.contact p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-item {
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-3px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.project-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.project-item p {
+    font-size: 0.9rem;
+}
+
+.project-details {
+    margin-top: 40px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.project-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* RODAPÉ COM GRADIENTE AZUL E AMARELO */
+.footer {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradiente azul e amarelo */
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Para posicionar a arte */
+    margin-bottom: 50px; /* Espaço extra para a arte */
+}
+
+.footer::after {
+    content: ''; /* Cria um pseudo-elemento para a arte */
+    position: absolute;
+    bottom: -30px; /* Ajuste para trazer a arte mais para cima */
+    left: 0;
+    width: 100%;
+    height: 100px; /* Altura da arte */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradiente azul e amarelo */
+    z-index: -1; /* Coloca a arte atrás do conteúdo */
+}
+
+/* GALERIA DE IMAGENS */
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Quebra as imagens em várias linhas */
+    gap: 10px; /* Espaçamento entre as imagens */
+    justify-content: center; /* Centraliza as imagens */
+}
+
+.gallery img {
+    width: 30%; /* Ajuste o tamanho das imagens (3 por linha) */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Efeito ao passar o mouse */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Amplia a imagem ao passar o mouse */
+}
+
+/* Estilo geral para a seção "Sobre Mim" */
+.about {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Fundo claro para destacar a seção */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-bottom: 40px;
+}
+
+.about h2 {
+    text-align: center; /* Centraliza o título */
+    color: #333; /* Cor do texto mais suave */
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 16px; /* Tamanho de fonte confortável */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: #555; /* Cor de texto neutra */
+    margin-bottom: 15px; /* Espaço entre os parágrafos */
+    text-align: justify; /* Justifica o texto para melhor leitura */
+}
+
+.about p strong {
+    color: #007BFF; /* Destaca títulos ou palavras-chave */
+    font-weight: bold;
+}
+
+/* Estilo para as imagens na galeria inicial (sem zoom) */
+.gallery img {
+    width: 100px; /* Tamanho inicial das imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    cursor: default; /* Cursor padrão, sem interação especial */
+}
+
+/* Estilo para as imagens na seção "Saiba Mais" */
+.project-details .gallery img {
+    width: 150px; /* Tamanho inicial maior para destacar */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Transição suave */
+    cursor: pointer; /* Altera o cursor para indicar interação */
+    border: 2px solid transparent; /* Borda inicial transparente */
+}
+
+/* Efeito ao passar o mouse nas imagens da seção "Saiba Mais" */
+.project-details .gallery img:hover {
+    transform: scale(2); /* Aumenta a imagem em 2x */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
+    border: 2px solid #007BFF; /* Adiciona uma borda azul destacada */
+}
